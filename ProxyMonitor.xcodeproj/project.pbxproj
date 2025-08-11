@@ -38,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		CE6A716D2E4A2A1F00AE9CD6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CE6A716E2E4A2BBB00AE9CD6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE88FC742E49A3030006FD88 /* ProxyMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProxyMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE88FC842E49A32F0006FD88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE88FC882E49A32F0006FD88 /* ProxyMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProxyMonitor.entitlements; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		CE88FC6B2E49A3030006FD88 = {
 			isa = PBXGroup;
 			children = (
+				CE6A716E2E4A2BBB00AE9CD6 /* README.md */,
 				CE6A716D2E4A2A1F00AE9CD6 /* .gitignore */,
 				CE88FC892E49A32F0006FD88 /* ProxyMonitor */,
 				CE88FCB62E49A33C0006FD88 /* Packaging */,
