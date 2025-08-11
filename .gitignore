@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Xcode
+build/
+DerivedData/
+*.xccheckout
+*.xcscmblueprint
+*.xcuserstate
+*.moved-aside
+*.xcworkspacedata
+xcuserdata/
+*.xcresult
+
+# Archives & dSYM
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Coverage / profiling
+*.gcno
+*.gcda
+*.profraw
+*.profdata
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Bundler
+.bundle/
+
+# Logs
+*.log

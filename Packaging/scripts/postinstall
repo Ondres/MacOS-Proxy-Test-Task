@@ -1,0 +1,59 @@
+#!/bin/zsh
+set -euo pipefail
+
+LABEL="test.ProxyMonitor"
+PLIST="/Library/LaunchDaemons/${LABEL}.plist"
+HOST="127.0.0.1"
+PORT="8888"
+LOG_DIR="/Library/Logs/ProxyMonitor"
+ERR_LOG="/Library/Logs/ProxyMonitor/installErrors.log"
+
+mkdir -p "$LOG_DIR"; chmod 755 "$LOG_DIR"
+touch "$ERR_LOG"; chmod 644 "$ERR_LOG"
+logMsg() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] [$1] ${*:2}" | tee -a "$ERR_LOG" ; }
+
+logMsg INFO "== postinstall start =="
+
+if [ -f "$PLIST" ]; then
+  logMsg INFO "launchctl unload $PLIST (ignore errors)"
+  /bin/launchctl unload "$PLIST" || true
+
+  logMsg INFO "launchctl load -w $PLIST"
+  /bin/launchctl load -w "$PLIST" || logMsg ERR "launchctl load failed"
+else
+  logMsg ERR "plist not found at $PLIST"
+fi
+
+if ! /bin/launchctl print "system/${LABEL}" >/dev/null 2>&1; then
+  logMsg WARN "launchctl load seems not active; trying bootstrap fallback"
+  /bin/launchctl bootout  system "$PLIST" 2>/dev/null || true
+  /bin/launchctl bootstrap system "$PLIST"            || logMsg ERR "bootstrap failed"
+  /bin/launchctl enable    "system/${LABEL}"          || true
+fi
+
+/bin/launchctl print "system/${LABEL}" 2>&1 | tee -a "$ERR_LOG" || true
+
+services=("${(@f)$(
+  /usr/sbin/networksetup -listallnetworkservices | tail -n +2 | sed 's/^\* //'
+)}")
+
+SOCKS_PORT="${SOCKS_PORT:-$PORT}"
+
+for svc in "${services[@]}"; do
+  logMsg INFO "Configure proxy for service: $svc"
+
+  /usr/sbin/networksetup -setwebproxy                "$svc" "$HOST" "$PORT"            || logMsg ERR "setwebproxy failed for $svc"
+  /usr/sbin/networksetup -setsecurewebproxy          "$svc" "$HOST" "$PORT"            || logMsg ERR "setsecurewebproxy failed for $svc"
+  /usr/sbin/networksetup -setwebproxystate           "$svc" on                          || logMsg ERR "setwebproxystate failed for $svc"
+  /usr/sbin/networksetup -setsecurewebproxystate     "$svc" on                          || logMsg ERR "setsecurewebproxystate failed for $svc"
+
+  /usr/sbin/networksetup -setsocksfirewallproxy      "$svc" "$HOST" "$SOCKS_PORT"       || logMsg ERR "setsocksfirewallproxy failed for $svc"
+  /usr/sbin/networksetup -setsocksfirewallproxystate "$svc" on                          || logMsg ERR "setsocksfirewallproxystate failed for $svc"
+
+  /usr/sbin/networksetup -getwebproxy                "$svc" | tee -a "$ERR_LOG" || true
+  /usr/sbin/networksetup -getsecurewebproxy          "$svc" | tee -a "$ERR_LOG" || true
+  /usr/sbin/networksetup -getsocksfirewallproxy      "$svc" | tee -a "$ERR_LOG" || true
+done
+
+logMsg INFO "Postinstall done: daemon ${LABEL} loaded/bootstrapped; proxy ${HOST}:${PORT} enabled."
+exit 0

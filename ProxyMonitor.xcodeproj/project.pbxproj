@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE88FC8A2E49A32F0006FD88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC842E49A32F0006FD88 /* AppDelegate.swift */; };
+		CE88FCA12E49A3310006FD88 /* ConnectionHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC932E49A3310006FD88 /* ConnectionHandlerProtocol.swift */; };
+		CE88FCA22E49A3310006FD88 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC9E2E49A3310006FD88 /* Logger.swift */; };
+		CE88FCA32E49A3310006FD88 /* SOCKSHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC952E49A3310006FD88 /* SOCKSHandler.swift */; };
+		CE88FCA42E49A3310006FD88 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC8D2E49A3310006FD88 /* Server.swift */; };
+		CE88FCA52E49A3310006FD88 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC992E49A3310006FD88 /* Constants.swift */; };
+		CE88FCA62E49A3310006FD88 /* HTTPSHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC962E49A3310006FD88 /* HTTPSHandler.swift */; };
+		CE88FCA72E49A3310006FD88 /* CommandRunnerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC9B2E49A3310006FD88 /* CommandRunnerService.swift */; };
+		CE88FCA82E49A3310006FD88 /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC972E49A3310006FD88 /* HTTPHandler.swift */; };
+		CE88FCA92E49A3310006FD88 /* URLHandlerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC912E49A3310006FD88 /* URLHandlerHelper.swift */; };
+		CE88FCAA2E49A3310006FD88 /* ProxyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC9C2E49A3310006FD88 /* ProxyService.swift */; };
+		CE88FCAB2E49A3310006FD88 /* BaseConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88FC942E49A3310006FD88 /* BaseConnectionHandler.swift */; };
+		CE88FCB82E49A3760006FD88 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE88FCB72E49A3760006FD88 /* Info.plist */; };
+		CE88FCBC2E49A3EC0006FD88 /* uninstall_app.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE88FC8F2E49A3310006FD88 /* uninstall_app.sh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE88FCB92E49A3CE0006FD88 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = scripts;
+			dstSubfolderSpec = 7;
+			files = (
+				CE88FCBC2E49A3EC0006FD88 /* uninstall_app.sh in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE6A716D2E4A2A1F00AE9CD6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CE88FC742E49A3030006FD88 /* ProxyMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProxyMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE88FC842E49A32F0006FD88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE88FC882E49A32F0006FD88 /* ProxyMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProxyMonitor.entitlements; sourceTree = "<group>"; };
+		CE88FC8D2E49A3310006FD88 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		CE88FC8F2E49A3310006FD88 /* uninstall_app.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = uninstall_app.sh; sourceTree = "<group>"; };
+		CE88FC912E49A3310006FD88 /* URLHandlerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandlerHelper.swift; sourceTree = "<group>"; };
+		CE88FC932E49A3310006FD88 /* ConnectionHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandlerProtocol.swift; sourceTree = "<group>"; };
+		CE88FC942E49A3310006FD88 /* BaseConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConnectionHandler.swift; sourceTree = "<group>"; };
+		CE88FC952E49A3310006FD88 /* SOCKSHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOCKSHandler.swift; sourceTree = "<group>"; };
+		CE88FC962E49A3310006FD88 /* HTTPSHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSHandler.swift; sourceTree = "<group>"; };
+		CE88FC972E49A3310006FD88 /* HTTPHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHandler.swift; sourceTree = "<group>"; };
+		CE88FC992E49A3310006FD88 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE88FC9B2E49A3310006FD88 /* CommandRunnerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandRunnerService.swift; sourceTree = "<group>"; };
+		CE88FC9C2E49A3310006FD88 /* ProxyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyService.swift; sourceTree = "<group>"; };
+		CE88FC9E2E49A3310006FD88 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		CE88FCAD2E49A33C0006FD88 /* postinstall */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = postinstall; sourceTree = "<group>"; };
+		CE88FCAF2E49A33C0006FD88 /* test.ProxyMonitor.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = test.ProxyMonitor.plist; sourceTree = "<group>"; };
+		CE88FCB52E49A33C0006FD88 /* build_pkg.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_pkg.sh; sourceTree = "<group>"; };
+		CE88FCB72E49A3760006FD88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE88FC712E49A3030006FD88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE88FC6B2E49A3030006FD88 = {
+			isa = PBXGroup;
+			children = (
+				CE6A716D2E4A2A1F00AE9CD6 /* .gitignore */,
+				CE88FC892E49A32F0006FD88 /* ProxyMonitor */,
+				CE88FCB62E49A33C0006FD88 /* Packaging */,
+				CE88FC752E49A3030006FD88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE88FC752E49A3030006FD88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FC742E49A3030006FD88 /* ProxyMonitor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE88FC892E49A32F0006FD88 /* ProxyMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FCA02E49A3310006FD88 /* Tool */,
+				CE88FC842E49A32F0006FD88 /* AppDelegate.swift */,
+				CE88FCB72E49A3760006FD88 /* Info.plist */,
+				CE88FC882E49A32F0006FD88 /* ProxyMonitor.entitlements */,
+			);
+			path = ProxyMonitor;
+			sourceTree = "<group>";
+		};
+		CE88FC8E2E49A3310006FD88 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FC8D2E49A3310006FD88 /* Server.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CE88FC902E49A3310006FD88 /* ProvisioningScripts */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FC8F2E49A3310006FD88 /* uninstall_app.sh */,
+			);
+			path = ProvisioningScripts;
+			sourceTree = "<group>";
+		};
+		CE88FC922E49A3310006FD88 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FC912E49A3310006FD88 /* URLHandlerHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE88FC982E49A3310006FD88 /* ProtocolHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FC932E49A3310006FD88 /* ConnectionHandlerProtocol.swift */,
+				CE88FC942E49A3310006FD88 /* BaseConnectionHandler.swift */,
+				CE88FC952E49A3310006FD88 /* SOCKSHandler.swift */,
+				CE88FC962E49A3310006FD88 /* HTTPSHandler.swift */,
+				CE88FC972E49A3310006FD88 /* HTTPHandler.swift */,
+			);
+			path = ProtocolHandlers;
+			sourceTree = "<group>";
+		};
+		CE88FC9A2E49A3310006FD88 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FC992E49A3310006FD88 /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE88FC9D2E49A3310006FD88 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FC9B2E49A3310006FD88 /* CommandRunnerService.swift */,
+				CE88FC9C2E49A3310006FD88 /* ProxyService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE88FC9F2E49A3310006FD88 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FC9E2E49A3310006FD88 /* Logger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		CE88FCA02E49A3310006FD88 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FC8E2E49A3310006FD88 /* Network */,
+				CE88FC902E49A3310006FD88 /* ProvisioningScripts */,
+				CE88FC922E49A3310006FD88 /* Helpers */,
+				CE88FC982E49A3310006FD88 /* ProtocolHandlers */,
+				CE88FC9A2E49A3310006FD88 /* Resources */,
+				CE88FC9D2E49A3310006FD88 /* Services */,
+				CE88FC9F2E49A3310006FD88 /* Logger */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		CE88FCAE2E49A33C0006FD88 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FCAD2E49A33C0006FD88 /* postinstall */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		CE88FCB02E49A33C0006FD88 /* LaunchDaemons */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FCAF2E49A33C0006FD88 /* test.ProxyMonitor.plist */,
+			);
+			path = LaunchDaemons;
+			sourceTree = "<group>";
+		};
+		CE88FCB12E49A33C0006FD88 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FCB02E49A33C0006FD88 /* LaunchDaemons */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		CE88FCB32E49A33C0006FD88 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		CE88FCB42E49A33C0006FD88 /* payload-root */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FCB12E49A33C0006FD88 /* Library */,
+				CE88FCB32E49A33C0006FD88 /* Applications */,
+			);
+			path = "payload-root";
+			sourceTree = "<group>";
+		};
+		CE88FCB62E49A33C0006FD88 /* Packaging */ = {
+			isa = PBXGroup;
+			children = (
+				CE88FCAE2E49A33C0006FD88 /* scripts */,
+				CE88FCB42E49A33C0006FD88 /* payload-root */,
+				CE88FCB52E49A33C0006FD88 /* build_pkg.sh */,
+			);
+			path = Packaging;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE88FC732E49A3030006FD88 /* ProxyMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE88FC812E49A3050006FD88 /* Build configuration list for PBXNativeTarget "ProxyMonitor" */;
+			buildPhases = (
+				CE88FC702E49A3030006FD88 /* Sources */,
+				CE88FC712E49A3030006FD88 /* Frameworks */,
+				CE88FC722E49A3030006FD88 /* Resources */,
+				CE88FCB92E49A3CE0006FD88 /* CopyFiles */,
+				CE88FCBA2E49A3D00006FD88 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProxyMonitor;
+			packageProductDependencies = (
+			);
+			productName = ProxyMonitor;
+			productReference = CE88FC742E49A3030006FD88 /* ProxyMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE88FC6C2E49A3030006FD88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					CE88FC732E49A3030006FD88 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+				};
+			};
+			buildConfigurationList = CE88FC6F2E49A3030006FD88 /* Build configuration list for PBXProject "ProxyMonitor" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE88FC6B2E49A3030006FD88;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CE88FC752E49A3030006FD88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE88FC732E49A3030006FD88 /* ProxyMonitor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE88FC722E49A3030006FD88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE88FCB82E49A3760006FD88 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE88FCBA2E49A3D00006FD88 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset -e\nSCRIPTS_DIR=\"$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH/Resources/scripts\"\n[ -d \"$SCRIPTS_DIR\" ] && chmod +x \"$SCRIPTS_DIR\"/*.sh || true\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE88FC702E49A3030006FD88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE88FCA12E49A3310006FD88 /* ConnectionHandlerProtocol.swift in Sources */,
+				CE88FCA22E49A3310006FD88 /* Logger.swift in Sources */,
+				CE88FCA32E49A3310006FD88 /* SOCKSHandler.swift in Sources */,
+				CE88FCA42E49A3310006FD88 /* Server.swift in Sources */,
+				CE88FCA52E49A3310006FD88 /* Constants.swift in Sources */,
+				CE88FCA62E49A3310006FD88 /* HTTPSHandler.swift in Sources */,
+				CE88FCA72E49A3310006FD88 /* CommandRunnerService.swift in Sources */,
+				CE88FCA82E49A3310006FD88 /* HTTPHandler.swift in Sources */,
+				CE88FCA92E49A3310006FD88 /* URLHandlerHelper.swift in Sources */,
+				CE88FCAA2E49A3310006FD88 /* ProxyService.swift in Sources */,
+				CE88FCAB2E49A3310006FD88 /* BaseConnectionHandler.swift in Sources */,
+				CE88FC8A2E49A32F0006FD88 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CE88FC7F2E49A3050006FD88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE88FC802E49A3050006FD88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		CE88FC822E49A3050006FD88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ProxyMonitor/ProxyMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProxyMonitor/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.ProxyMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE88FC832E49A3050006FD88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ProxyMonitor/ProxyMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProxyMonitor/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.ProxyMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE88FC6F2E49A3030006FD88 /* Build configuration list for PBXProject "ProxyMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE88FC7F2E49A3050006FD88 /* Debug */,
+				CE88FC802E49A3050006FD88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE88FC812E49A3050006FD88 /* Build configuration list for PBXNativeTarget "ProxyMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE88FC822E49A3050006FD88 /* Debug */,
+				CE88FC832E49A3050006FD88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE88FC6C2E49A3030006FD88 /* Project object */;
+}
